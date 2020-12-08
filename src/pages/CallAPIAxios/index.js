@@ -16,14 +16,11 @@ const CallAPIAxios = () => {
   });
 
   const getData = () => {
-    // fetch('https://reqres.in/api/users/2')
-    //   .then((response) => response.json())
-    //   .then((json) => {
-    //     console.log(json);
-    //     setDataUser(json.data);
-    //   });
     Axios.get('https://reqres.in/api/users/3')
-      .then((result) => console.log('result ', result))
+      .then((result) => {
+        //   console.log('result ', result)
+        setDataUser(result.data.data);
+      })
       .catch((err) => console.log('err', err));
   };
 
@@ -33,18 +30,11 @@ const CallAPIAxios = () => {
       job: 'leader',
     };
 
-    fetch('https://reqres.in/api/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dataForAPI),
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        console.log('hasil', json);
-        setDataJob(json);
-      });
+    Axios.post('https://reqres.in/api/users', dataForAPI)
+      .then((result) => {
+        setDataJob(result.data);
+      })
+      .catch((err) => console.log('error', err));
   };
 
   return (
