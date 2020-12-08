@@ -1,13 +1,15 @@
 import React from 'react';
 import {Button, StyleSheet, Text, TextInput, View, Image} from 'react-native';
+import avaa from '../../assets/icons/cart.png';
 
 const Item = () => {
   return (
     <View style={styles.itemContainer}>
       <Image
-        sourc={{
-          uri: 'http://placeimg.com/100/100/people',
-        }}
+        // sourc={{
+        //   uri: 'http://placeimg.com/100/100/people',
+        // }}
+        source={avaa}
         style={styles.avatar}
       />
       <View style={styles.desc}>
