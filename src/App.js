@@ -9,7 +9,7 @@ import StateDinamis from './pages/StateDinamis';
 import Position from './pages/position';
 import Communication from './pages/Communication';
 import ReactNativeSVG from './pages/ReactNativeSVG';
-import CallAPIVanilla from './pages/CallAPIVanilla';
+import CallAPIVanilla from './pages/CallAPIAxios';
 
 const App = () => {
   // const [isShow, SetIsShow] = useState(true);
@@ -30,8 +30,9 @@ const App = () => {
         {/* <StateDinamis /> */}
         {/* <Communication /> */}
         {/* <ReactNativeSVG /> */}
+        {/* <CallAPIVanilla /> */}
         <CallAPIVanilla />
-        <Text> misalkan Bisa beralih ke laptop baru oke </Text>
+        <Text> baru mencoba axios </Text>
       </ScrollView>
     </View>
   );
