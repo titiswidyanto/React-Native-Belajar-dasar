@@ -31,7 +31,7 @@ const App = () => {
         {/* <Communication /> */}
         <ReactNativeSVG />
         <CallAPIVanilla />
-        <Text> Bisa beralih ke laptop baru oke </Text>
+        <Text> misalkan Bisa beralih ke laptop baru oke </Text>
       </ScrollView>
     </View>
   );
