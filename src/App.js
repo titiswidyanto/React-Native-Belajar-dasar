@@ -29,7 +29,7 @@ const App = () => {
         {/* <PropsDinamis /> */}
         {/* <StateDinamis /> */}
         {/* <Communication /> */}
-        <ReactNativeSVG />
+        {/* <ReactNativeSVG /> */}
         <CallAPIVanilla />
         <Text> misalkan Bisa beralih ke laptop baru oke </Text>
       </ScrollView>
