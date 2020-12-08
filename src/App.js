@@ -10,6 +10,7 @@ import Position from './pages/position';
 import Communication from './pages/Communication';
 import ReactNativeSVG from './pages/ReactNativeSVG';
 import CallAPIVanilla from './pages/CallAPIAxios';
+import LocalAPI from './pages/LocalAPI';
 
 const App = () => {
   // const [isShow, SetIsShow] = useState(true);
@@ -31,8 +32,9 @@ const App = () => {
         {/* <Communication /> */}
         {/* <ReactNativeSVG /> */}
         {/* <CallAPIVanilla /> */}
-        <CallAPIVanilla />
-        <Text> baru mencoba axios </Text>
+        {/* <CallAPIVanilla /> */}
+        <LocalAPI />
+        <Text> mencoba json local</Text>
       </ScrollView>
     </View>
   );
