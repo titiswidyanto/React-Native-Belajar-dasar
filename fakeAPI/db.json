@@ -1,10 +1,40 @@
 {
-    "users":[
-      {
-        "id":1,
-        "name": "titis wid",
-        "email":"titis@email.com",
-        "bidang": "robotika"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "name": "titis wid",
+      "email": "titis@email.com",
+      "bidang": "robotika"
+    },
+    {
+      "name": "titaja",
+      "email": "aja@email.com",
+      "bidang": "robot",
+      "id": 2
+    },
+    {
+      "name": "senja",
+      "email": "saya@email.com",
+      "bidang": "Ai",
+      "id": 3
+    },
+    {
+      "name": "E",
+      "email": "mastisoffice@gmail.com",
+      "bidang": "R",
+      "id": 4
+    },
+    {
+      "name": "Widi anto",
+      "email": "Widi@email.com",
+      "bidang": "Tani",
+      "id": 5
+    },
+    {
+      "name": "Anto",
+      "email": "Anto@email.com",
+      "bidang": "Pedagang Cilok",
+      "id": 6
+    }
+  ]
+}

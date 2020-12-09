@@ -33,8 +33,8 @@ const LocalAPI = () => {
       email,
       bidang,
     };
-    // console.log('data before send', data);
-    Axios.post('http://127.0.0.1:3000/users', data)
+    console.log('data before send', data);
+    Axios.post(' http://192.168.1.104:8000/users', data)
       .then((res) => {
         console.log('res', res);
         setName('');
