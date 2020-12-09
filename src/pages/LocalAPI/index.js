@@ -1,15 +1,15 @@
-import React from 'react';
+import Axios from 'axios';
+import React, {useState} from 'react';
 import {Button, StyleSheet, Text, TextInput, View, Image} from 'react-native';
-import avaa from '../../assets/icons/cart.png';
+// import avaa from '../../assets/icons/cart.png';
 
 const Item = () => {
   return (
     <View style={styles.itemContainer}>
       <Image
-        // sourc={{
-        //   uri: 'http://placeimg.com/100/100/people',
-        // }}
-        source={avaa}
+        source={{
+          uri: 'http://placeimg.com/100/100/people',
+        }}
         style={styles.avatar}
       />
       <View style={styles.desc}>
@@ -23,14 +23,49 @@ const Item = () => {
 };
 
 const LocalAPI = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [bidang, setBidang] = useState('');
+
+  const submit = () => {
+    const data = {
+      name,
+      email,
+      bidang,
+    };
+    // console.log('data before send', data);
+    Axios.post('http://127.0.0.1:3000/users', data)
+      .then((res) => {
+        console.log('res', res);
+        setName('');
+        setEmail('');
+        setBidang('');
+      })
+      .catch((err) => console.log('errorrrr', err));
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.textTittle}>Belajar databse json</Text>
       <Text>masukkan nama anggota</Text>
-      <TextInput placeholder="Nama Lengkap" style={styles.input} />
-      <TextInput placeholder="Email" style={styles.input} />
-      <TextInput placeholder="Bidang" style={styles.input} />
-      <Button title="Simpan" />
+      <TextInput
+        placeholder="Nama Lengkap"
+        style={styles.input}
+        value={name}
+        onChangeText={(value) => setName(value)}
+      />
+      <TextInput
+        placeholder="Email"
+        style={styles.input}
+        value={email}
+        onChangeText={(value) => setEmail(value)}
+      />
+      <TextInput
+        placeholder="Bidang"
+        style={styles.input}
+        value={bidang}
+        onChangeText={(value) => setBidang(value)}
+      />
+      <Button title="Simpan" onPress={submit} />
       <View style={styles.line} />
       <Item />
     </View>
